@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Zest Navigator
+Bundle-SymbolicName: ca.footeware.e4.zestnavigator;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Footeware.ca
+Require-Bundle: org.eclipse.jface,
+ org.eclipse.e4.ui.model.workbench,
+ org.eclipse.e4.ui.di,
+ org.eclipse.e4.ui.services,
+ org.eclipse.e4.core.di.annotations,
+ org.eclipse.e4.core.di,
+ org.eclipse.e4.ui.workbench,
+ org.eclipse.zest.core,
+ org.eclipse.zest.layouts
+Bundle-RequiredExecutionEnvironment: JavaSE-23
+Import-Package: jakarta.annotation;version="[2.1.0,3.0.0)",
+ jakarta.inject;version="[2.0.0,3.0.0)",
+ org.osgi.framework;version="[1.10.0,2.0.0)"
+Automatic-Module-Name: ca.footeware.e4.zestnavigator

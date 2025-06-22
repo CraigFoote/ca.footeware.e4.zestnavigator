@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/descriptor/basic" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_BxaXACerEeWxCPrV0pAZQQ">
+  <imports xsi:type="menu:Menu" xmi:id="_EALEcE43EfCnQd0wttZl0g" elementId="ca.footeware.e4.application.ui.menu.showview"/>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_EI7oACerEeWxCPrV0pAZQQ" featurename="descriptors" parentElementId="xpath:/">
+    <elements xsi:type="basic:PartDescriptor" xmi:id="_KMklcCerEeWxCPrV0pAZQQ" elementId="ca.footeware.e4.partdescriptor.zestgraph" label="Zest Graph" iconURI="platform:/plugin/ca.footeware.e4.zestnavigator/icons/gef.png" tooltip="" category="General" closeable="true" contributionURI="bundleclass://ca.footeware.e4.zestnavigator/ca.footeware.e4.zestnavigator.parts.ZestNavigatorView">
+      <tags>View</tags>
+      <tags>categoryTag:General</tags>
+    </elements>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_DDVW0E45EfCnQd0wttZl0g" featurename="menuContributions" parentElementId="xpath:/">
+    <elements xsi:type="menu:MenuContribution" xmi:id="_GOAjEE45EfCnQd0wttZl0g" elementId="ca.footeware.e4.zestgraph.menucontribution.0" parentId="ca.footeware.e4.application.ui.menu.showview">
+      <children xsi:type="menu:DirectMenuItem" xmi:id="_KRx6gE45EfCnQd0wttZl0g" elementId="ca.footeware.e4.menu.showview.zestgraph" label="Zest Graph" iconURI="platform:/plugin/ca.footeware.e4.zestnavigator/icons/gef.png" contributionURI="bundleclass://ca.footeware.e4.zestnavigator/ca.footeware.e4.zestnavigator.handlers.ShowViewHandler"/>
+    </elements>
+  </fragments>
+</fragment:ModelFragments>
