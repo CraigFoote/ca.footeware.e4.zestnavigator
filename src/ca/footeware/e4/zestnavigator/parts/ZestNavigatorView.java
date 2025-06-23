@@ -1,7 +1,5 @@
 package ca.footeware.e4.zestnavigator.parts;
 
-import java.util.ArrayList;
-
 import org.eclipse.e4.core.di.annotations.Optional;
 import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.e4.ui.services.IServiceConstants;
@@ -35,7 +33,7 @@ public class ZestNavigatorView {
 	@Inject
 	@Optional
 	public void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) Object o) {
-		if (o instanceof ITreeSelection selection) {
+		if (viewer != null && o instanceof ITreeSelection selection) {
 			viewer.setInput(selection);
 		}
 	}
