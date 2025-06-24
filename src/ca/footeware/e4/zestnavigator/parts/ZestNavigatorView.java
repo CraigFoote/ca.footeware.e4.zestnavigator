@@ -1,8 +1,13 @@
 package ca.footeware.e4.zestnavigator.parts;
 
+import java.awt.Desktop;
+import java.io.File;
+import java.io.IOException;
+
 import org.eclipse.e4.core.di.annotations.Optional;
 import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.e4.ui.services.IServiceConstants;
+import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.ITreeSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
@@ -23,6 +28,19 @@ public class ZestNavigatorView {
 		viewer.setContentProvider(new TreePathContentProvider());
 		viewer.setLabelProvider(new ZestNavigatorLabelProvider());
 		viewer.setLayoutAlgorithm(new SpringLayoutAlgorithm());
+		viewer.addDoubleClickListener(event -> {
+			if (event.getSelection() instanceof IStructuredSelection selection
+					&& selection.getFirstElement() instanceof File file && Desktop.isDesktopSupported()) {
+				Desktop desktop = Desktop.getDesktop();
+				if (desktop.isSupported(Desktop.Action.OPEN)) {
+					try {
+						desktop.open(file);
+					} catch (IOException e) {
+						// TODO notify user (toast?)
+					}
+				}
+			}
+		});
 	}
 
 	@Focus
