@@ -12,7 +12,8 @@ Require-Bundle: org.eclipse.jface,
  org.eclipse.e4.core.di,
  org.eclipse.e4.ui.workbench,
  org.eclipse.zest.core,
- org.eclipse.zest.layouts
+ org.eclipse.zest.layouts,
+ org.eclipse.nebula.widgets.opal.notifier;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-23
 Import-Package: jakarta.annotation;version="[2.1.0,3.0.0)",
  jakarta.inject;version="[2.0.0,3.0.0)",

@@ -9,7 +9,7 @@
   </fragments>
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_DDVW0E45EfCnQd0wttZl0g" featurename="menuContributions" parentElementId="xpath:/">
     <elements xsi:type="menu:MenuContribution" xmi:id="_GOAjEE45EfCnQd0wttZl0g" elementId="ca.footeware.e4.zestgraph.menucontribution.0" parentId="ca.footeware.e4.application.ui.menu.showview">
-      <children xsi:type="menu:DirectMenuItem" xmi:id="_KRx6gE45EfCnQd0wttZl0g" elementId="ca.footeware.e4.menu.showview.zestgraph" label="Zest Graph" iconURI="platform:/plugin/ca.footeware.e4.zestnavigator/icons/palette_view.png" contributionURI="bundleclass://ca.footeware.e4.zestnavigator/ca.footeware.e4.zestnavigator.handlers.ShowViewHandler"/>
+      <children xsi:type="menu:DirectMenuItem" xmi:id="_KRx6gE45EfCnQd0wttZl0g" elementId="ca.footeware.e4.menu.showview.zestgraph" label="Zest Navigator" iconURI="platform:/plugin/ca.footeware.e4.zestnavigator/icons/palette_view.png" contributionURI="bundleclass://ca.footeware.e4.zestnavigator/ca.footeware.e4.zestnavigator.handlers.ShowViewHandler"/>
     </elements>
   </fragments>
 </fragment:ModelFragments>

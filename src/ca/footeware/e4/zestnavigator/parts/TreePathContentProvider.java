@@ -1,6 +1,8 @@
 package ca.footeware.e4.zestnavigator.parts;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.eclipse.jface.viewers.ITreeSelection;
 import org.eclipse.jface.viewers.TreePath;
@@ -19,10 +21,17 @@ class TreePathContentProvider implements IGraphEntityContentProvider {
 	@Override
 	public Object[] getConnectedTo(Object entity) {
 		if (entity instanceof TreePath treePath) {
+			List<File> result = new ArrayList<>();
 			Object lastSegment = treePath.getLastSegment();
 			if (lastSegment instanceof File file && file.isDirectory()) {
-				return file.listFiles();
+				result.addAll(List.of(file.listFiles()));
 			}
+			if (treePath.getParentPath() instanceof TreePath parentPath
+					&& parentPath.getLastSegment() instanceof File file) {
+				result.add(file);
+			}
+
+			return result.toArray();
 		}
 		return new Object[0];
 	}

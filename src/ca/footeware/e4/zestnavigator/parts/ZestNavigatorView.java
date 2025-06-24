@@ -9,6 +9,7 @@ import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.e4.ui.services.IServiceConstants;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.ITreeSelection;
+import org.eclipse.nebula.widgets.opal.notifier.Notifier;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.zest.core.viewers.GraphViewer;
@@ -36,7 +37,7 @@ public class ZestNavigatorView {
 					try {
 						desktop.open(file);
 					} catch (IOException e) {
-						// TODO notify user (toast?)
+						Notifier.notify("Error", e.getLocalizedMessage());
 					}
 				}
 			}
